@@ -1,0 +1,11 @@
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <div class="columns is-desktop is-multiline">
+        {% for card in include['cards'] %}
+        <div class="column is-one-quarter-desktop">{% include card.html data=card %}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

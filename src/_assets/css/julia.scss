@@ -1,0 +1,131 @@
+$grey-dark: #353535;
+$julia-blue: #4d64ae;
+$accent: #399746;
+$julia-purple: #9259a3;
+$julia-red: #ca3c32;
+$primary: darken($accent, 10%);
+$footer-background-color: $accent;
+$text: $grey-dark;
+$text-light: lighten($text, 20%);
+$text-strong: darken($text, 5%);
+$link: darken($julia-purple, 5%);
+$link-visited: lighten($julia-purple, 10%);
+$link-hover: lighten($julia-purple, 20%);
+$link-focus: $julia-purple;
+$link-active: $julia-purple;
+
+@import 'bulma/bulma';
+@import 'libs/mixins';
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500,700|Source+Sans+Pro:300,400,600');
+
+html {
+  background-attachment: fixed, fixed;
+//   background-image: asset_url("overlay.png"),	asset_url("binding_light.png");
+
+  body {
+    @include font-smoothing(on);
+    .title {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      &.fancy {
+        padding-bottom: 10px;
+        border-bottom: 5px solid $accent;
+      }
+      &.thin {
+        font-weight: 500;
+      }
+    }
+    .logo-svg {
+      width: 24px;
+      height: 24px;
+      fill: $julia-purple;
+    }
+    .navbar-item {
+        color: #4d64ae !important;
+        border-color: #4d64ae !important;
+      .title {
+        padding-left: 10px;
+      }
+    }
+    .hero {
+      &.is-primary {
+        background: $julia-blue; /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, $julia-blue 0%, $julia-blue 50%, $julia-blue 99%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, $julia-blue 0%,$julia-blue 50%,$julia-blue 99%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, $julia-blue 0%,$julia-blue 50%,$julia-blue 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        h1{
+          color: #fff !important;
+        }
+      }
+    }
+    .subtitle{
+      font-family: 'Rajdhani', sans-serif;
+    }
+    // .burger {
+    //   color: $grey-dark;
+    // }
+    .navbar-item{
+      font-size: 1em;
+    }
+    .controls {
+      box-sizing: initial !important;
+    }
+    .accent {
+      color: $julia-purple;
+    }
+    .box {
+      &.use-theme {
+        min-height: 350px;
+        max-height: 350px;
+        overflow: auto;
+        .info {
+          padding: 10px 0px;
+          border-bottom: 1px solid $grey-lighter;
+          border-top: 1px solid $grey-lighter;
+        }
+      }
+    }
+    #search-section {
+      display: none;
+    }
+    .search{
+      background-color: $accent;
+      color: #fff;
+      input[type="text"] {
+        border: 0px;
+        border-bottom: 4px solid #fff;
+        color: #fff;
+        @include placeholder-color(#fff);
+        font-size: 3em;
+      }
+      .search-hide {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        height: 100% !important;
+        .fa-stack-2x{
+          color: #ddd !important;
+        }
+        color: #fff !important;
+      }
+      li {
+        font-size: 1.2em;
+        line-height: 2em;
+      }
+      a{
+        color: #eee;
+      }
+    }
+    footer {
+      color: #fff;
+      a {
+        color: #fff;
+        &:hover{
+          color: lighten($accent, 40%);
+        }
+      }
+      strong {
+        color: #fff;
+      }
+    }
+  }
+}

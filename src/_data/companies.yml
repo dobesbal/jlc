@@ -1,0 +1,17 @@
+# Template
+#
+# Company name:
+#   industry:  # Company industry
+#   url:          # Company site
+#   blog:         # Company blog
+#   github:       # GitHub account
+#   location:     # Company location
+#   description:  >-
+#     Company description including a short summary of how Erlang is used in production
+
+Cursor Insight:
+  industry: Artificial Intelligence
+  url: https://cursorinsight.com
+  github: https://github.com/cursorinsight/
+  location: Budapest, Hungary
+  description: The backend of Cursor Insight's electronic signature solution (which serves millions of banking customers) is written in Erlang and Julia.
